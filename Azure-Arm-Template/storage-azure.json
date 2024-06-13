@@ -6,11 +6,11 @@
     "variables": {},
     "resources": [
         {
-            "name": "armstorage",
+            "name": "azurestorage",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2023-01-01",
             "tags": {
-                "displayName": "armstorage"
+                "displayName": "azurestorage"
             },
             "location": "[resourceGroup().location]",
             "kind": "StorageV2",
