@@ -5,7 +5,20 @@
     "functions": [],
     "variables": {},
     "resources": [
-        
+        {
+            "name": "armstorage",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2023-01-01",
+            "tags": {
+                "displayName": "armstorage"
+            },
+            "location": "[resourceGroup().location]",
+            "kind": "StorageV2",
+            "sku": {
+                "name": "Premium_LRS",
+                "tier": "Premium"
+            }
+        }
     ],
     "outputs": {}
 }

@@ -15,3 +15,6 @@ az vm create `
 
 # CLI poweshell script for deletion of resource group.
 az group delete --name learning-azure-cli
+
+# for creation of storage using Json template
+PS C:\Users\Neelam\OneDrive\Desktop\Azure-Devops\Azure-Devops\Azure-Arm-Template> az deployment group create --name storageaccountcreate --resource-group vscode --template-file storage-azure.json
