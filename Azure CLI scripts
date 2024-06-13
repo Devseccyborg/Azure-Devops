@@ -12,3 +12,6 @@ az vm create `
 >>     --generate-ssh-keys `
 >>     --output json `
 >>     --verbose
+
+# CLI poweshell script for deletion of resource group.
+az group delete --name learning-azure-cli
