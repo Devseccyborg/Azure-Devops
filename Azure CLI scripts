@@ -1,0 +1,14 @@
+# Cli powershell script for creating resource group
+az group create --name "Resourcegroupname" --location "which location"
+
+#Cli powershell script for creating virtual network, subnet and vm
+az vm create `
+>>     --resource-group learning-azure-cli `
+>>     --name Test-cli `
+>>     --image Ubuntu2204 `
+>>     --vnet-name vnet-cli `
+>>     --subnet subnet-cli `
+>>     --admin-username azureuser `
+>>     --generate-ssh-keys `
+>>     --output json `
+>>     --verbose
