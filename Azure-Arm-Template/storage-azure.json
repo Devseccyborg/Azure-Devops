@@ -16,7 +16,7 @@
     },
     "functions": [],
     "variables": {
-        "resourcesName": "shirishdemoresource"
+        "resourcesName": "azureIAM"
     },
     "resources": [
         {
