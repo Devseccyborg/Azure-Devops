@@ -1,12 +1,26 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
+    "parameters": {
+        "storageaccounttire": {
+            "type": "string",
+            "metadata": {
+                "description": "Tier of storage account"
+            },
+            "defaultValue": "Premium",
+            "allowedValues": [
+                "Premium",
+                "Standard"
+            ]
+        }
+    },
     "functions": [],
-    "variables": {},
+    "variables": {
+        "resourcesName": "shirishdemoresource"
+    },
     "resources": [
         {
-            "name": "shirishjagdale150892",
+            "name": "[variables('resourcesName')]",
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2023-01-01",
             "tags": {
@@ -16,7 +30,7 @@
             "kind": "StorageV2",
             "sku": {
                 "name": "Premium_LRS",
-                "tier": "Premium"
+                "tier": "[parameters('storageaccounttire')]"
             }
         }
     ],
