@@ -3,7 +3,7 @@ az group create --name "Resourcegroupname" --location "which location"
 
 # To know the resource list you created please use below command
  az group list --output table
-
+ az storage account list --output table
 
 #Cli powershell script for creating virtual network, subnet and vm
 az vm create `
@@ -19,6 +19,9 @@ az vm create `
 
 # CLI poweshell script for deletion of resource group.
 az group delete --name learning-azure-cli
+
+# for creation of storage using CLI
+az storage account create --resource-group MyResourceGroup --name storage134 --location eastus --sku Standard_LRS
 
 # for creation of storage using Json template
 PS C:\Users\Neelam\OneDrive\Desktop\Azure-Devops\Azure-Devops\Azure-Arm-Template> az deployment group create --name storageaccountcreate --resource-group vscode --template-file storage-azure.json
