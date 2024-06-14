@@ -6,7 +6,7 @@
     "variables": {},
     "resources": [
         {
-            "name": "firewall1",
+            "name": "neelam",
             "type": "Microsoft.Network/azureFirewalls",
             "apiVersion": "2023-04-01",
             "location": "[resourceGroup().location]",
@@ -128,13 +128,11 @@
             "sku": {
                 "name": "standard"
             },
-            "tags": {
-                "createdFor": "firewall1"
-            },
+            "tags": {},
             "properties": {
                 "publicIPAllocationMethod": "Static",
                 "dnsSettings": {
-                    "domainNameLabel": "[concat('firewall1', uniqueString(resourceGroup().id))]"
+                    "domainNameLabel": "[uniqueString(resourceGroup().id)]"
                 }
             }
         }
